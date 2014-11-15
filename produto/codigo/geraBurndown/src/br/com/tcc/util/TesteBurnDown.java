@@ -1,11 +1,13 @@
 package br.com.tcc.util;
 
 import java.text.ParseException;
+import java.util.Date;
+
+import junit.framework.TestCase;
 
 import org.junit.Test;
 
 import br.com.tcc.model.Sprint;
-import junit.framework.TestCase;
 
 public class TesteBurnDown extends TestCase{
 	
@@ -22,4 +24,17 @@ public class TesteBurnDown extends TestCase{
 		
 		assertEquals(7, sprint.getQtdeDias());
 	}
+	
+	@Test
+	public void testaDeveRetornarDataNula() throws ParseException{
+		Date date = DataUtil.converteStringParaDate("");
+		assertNull("mensagem", date);
+	}
+	
+	@Test(expected=ParseException.class)
+	public void testaDeveRetornarExcecao() throws ParseException{
+		@SuppressWarnings("unused")
+		Date date = DataUtil.converteStringParaDate("10/45/1991");
+	}
+	
 }
