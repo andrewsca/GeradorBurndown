@@ -15,4 +15,11 @@ public class TesteBurnDown extends TestCase{
 		
 		assertEquals(170.0, sprint.getTotalHoras());
 	}
+	
+	@Test
+	public void testaSprintDeveTer7Dias() throws ParseException{
+		Sprint sprint = Main.criaSprint();
+		
+		assertEquals(7, sprint.getQtdeDias());
+	}
 }
