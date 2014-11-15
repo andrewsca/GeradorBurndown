@@ -37,4 +37,23 @@ public class TesteBurnDown extends TestCase{
 		Date date = DataUtil.converteStringParaDate("10/45/1991");
 	}
 	
+	@Test
+	public void testaSprintDataInicioNula() throws ParseException {
+		Sprint sprint = new Sprint();
+		
+		assertEquals(null, sprint.getDtInicio());
+	}
+	
+	@Test
+	public void testaSprintDataFim01Dezembro2014() throws ParseException {
+		Sprint sprint = new Sprint();
+		
+		@SuppressWarnings("deprecation")
+		Date data = new Date(2014,12,01);
+		
+		sprint.setDtFim(data);
+		
+		assertEquals(data, sprint.getDtFim());
+	}
+	
 }
