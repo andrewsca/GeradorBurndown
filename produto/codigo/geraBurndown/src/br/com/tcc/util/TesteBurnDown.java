@@ -7,11 +7,11 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import br.com.tcc.model.Sprint;
+//import br.com.tcc.model.Sprint;
 
 public class TesteBurnDown extends TestCase{
 	
-	@Test
+	/*@Test
 	public void testaSprintDeveTer170HorasTotais() throws ParseException{
 		
 		Sprint sprint = Main.criaSprint();		
@@ -44,7 +44,7 @@ public class TesteBurnDown extends TestCase{
 		
 		Sprint sprint = new Sprint();		
 		assertEquals(null, sprint.getDtInicio());
-	}
+	}*/
 	
 	@Test
 	public void testaSprintDataFim01Dezembro2014() throws ParseException {
