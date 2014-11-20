@@ -1,9 +1,16 @@
 package br.com.tcc.util;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import junit.framework.TestCase;
+
 import org.junit.Test;
+
+import br.com.tcc.bo.SprintBO;
+import br.com.tcc.model.Estoria;
 import br.com.tcc.model.Sprint;
 
 public class TesteBurnDown extends TestCase{
@@ -22,6 +29,11 @@ public class TesteBurnDown extends TestCase{
 		assertEquals(7, sprint.getQtdeDias());
 	}
 	
+	
+	/**
+	 * Métodos para testes da classe DataUtil e demais datas.
+	 * @throws ParseException
+	 */
 	@Test
 	public void testaDeveRetornarDataNula() throws ParseException{
 		
@@ -54,4 +66,40 @@ public class TesteBurnDown extends TestCase{
 		assertEquals(data, sprint.getDtFim());
 	}
 	
+	/**
+	 * Métodos de teste da Classe SprintBO.
+	 */
+	@Test
+	public void testaCalculoTotalPontosDeveSer10(){
+		
+		SprintBO bo = new SprintBO();
+		Sprint sprint = new Sprint();
+		sprint.setEstorias(criaListaEstorias());
+
+		assertEquals(new Integer(10), bo.calculaTotalPontos(sprint));
+		
+	}
+	
+	/**
+	 * Método utilizado para criar uma lista de estorias para testes.
+	 */
+	private List<Estoria> criaListaEstorias(){
+		
+		List<Estoria> estorias = new ArrayList<Estoria>();
+		
+		Estoria est1 = new Estoria();
+		est1.setTempoEstimado(10);
+		est1.setCodEstoria(1);
+		est1.setQtdePontos(6);
+
+		Estoria est2 = new Estoria();
+		est2.setTempoEstimado(15);
+		est2.setCodEstoria(2);
+		est2.setQtdePontos(4);
+		
+		estorias.add(est1);
+		estorias.add(est2);
+		
+		return estorias;
+	}
 }
