@@ -1,4 +1,6 @@
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Map;
 
 import junit.framework.TestCase;
 import model.Estoria;
@@ -43,7 +45,7 @@ public class TesteBurnUp extends TestCase{
 	}
 	
 	@Test
-	public void testaCalculoTotalHorasDeveSer16(){
+	public void testaCalculoTotalHorasSprintBODeveSer16(){
 		SprintBO bo = new SprintBO();
 		Sprint sprint = new Sprint();
 		sprint.setEstorias(new ArrayList<Estoria>());
@@ -85,6 +87,22 @@ public class TesteBurnUp extends TestCase{
 		sprint.getItensHistorico().add(new ItemHistorico());
 
 		assertEquals(3, sprint.getItensHistorico().size());
+	}
+	
+	@Test
+	public void testaBurnUpBOCaculaEixosXYHoras(Sprint sprint){
+		ItemHistorico item = new ItemHistorico();
+		Date data = new Date(2014,11,20);
+		item.setData(data);
+		item.setTempoGasto(1);
+		
+		sprint = new Sprint();
+		sprint.setItensHistorico(new ArrayList<ItemHistorico>());
+		sprint.getItensHistorico().add(item);
+		
+		BurnUpBO bo = new BurnUpBO();
+		Map<Date, Double> eixoXY = bo.calculaEixosXYHoras(sprint);
+		assertTrue(eixoXY.containsKey(data));
 	}
 	
 }
