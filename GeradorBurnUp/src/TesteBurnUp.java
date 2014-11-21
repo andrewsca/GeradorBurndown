@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 
+import junit.framework.TestCase;
 import model.Estoria;
 import model.Sprint;
 
 import org.junit.Test;
 
-import junit.framework.TestCase;
+import bo.SprintBO;
 
 /**
  * TDD Gerador BurnUp
