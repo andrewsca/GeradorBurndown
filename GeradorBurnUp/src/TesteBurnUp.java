@@ -19,5 +19,12 @@ public class TesteBurnUp extends TestCase{
 		assertEquals(10, sprint.getQtdeDias());
 	}
 	
+	@Test
+	public void testaSprintDeveTer60Horas(){
+		Sprint sprint = new Sprint();
+		
+		assertEquals(60, sprint.getTotalHoras);
+	}
+	
 	
 }
