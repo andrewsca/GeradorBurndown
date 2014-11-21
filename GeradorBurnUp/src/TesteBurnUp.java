@@ -81,6 +81,8 @@ public class TesteBurnUp extends TestCase{
 		Sprint sprint = new Sprint();
 		sprint.setItensHistorico(new ArrayList<ItemHistorico>());
 		sprint.getItensHistorico().add(new ItemHistorico());
+		sprint.getItensHistorico().add(new ItemHistorico());
+		sprint.getItensHistorico().add(new ItemHistorico());
 
 		assertEquals(3, sprint.getItensHistorico().size());
 	}
