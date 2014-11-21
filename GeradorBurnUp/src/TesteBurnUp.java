@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 import junit.framework.TestCase;
 import model.Estoria;
+import model.ItemHistorico;
 import model.Sprint;
 
 import org.junit.Test;
@@ -76,12 +77,10 @@ public class TesteBurnUp extends TestCase{
 	}
 	
 	@Test
-	private void testaSprintDeveTer3ItensHistorico(){
+	public void testaSprintDeveTer3ItensHistorico(){
 		Sprint sprint = new Sprint();
 		sprint.setItensHistorico(new ArrayList<ItemHistorico>());
-		sprint.getItensHistorico.add(new ItemHistorico());
-		sprint.getItensHistorico.add(new ItemHistorico());
-		sprint.getItensHistorico.add(new ItemHistorico());
+		sprint.getItensHistorico().add(new ItemHistorico());
 
 		assertEquals(3, sprint.getItensHistorico().size());
 	}

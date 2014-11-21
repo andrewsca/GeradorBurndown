@@ -7,6 +7,7 @@ public class Sprint {
 	private int qtdeDias;
 	private List<Estoria> estorias;
 	private Double totalHoras;
+	private List<ItemHistorico> itensHistorico;
 
 	public int getQtdeDias() {
 		return qtdeDias;
@@ -30,5 +31,13 @@ public class Sprint {
 
 	public void setEstorias(List<Estoria> estorias) {
 		this.estorias = estorias;
+	}
+
+	public List<ItemHistorico> getItensHistorico() {
+		return itensHistorico;
+	}
+
+	public void setItensHistorico(List<ItemHistorico> itensHistorico) {
+		this.itensHistorico = itensHistorico;
 	}
 }
