@@ -75,4 +75,15 @@ public class TesteBurnUp extends TestCase{
 		assertEquals(new Integer(20), bo.calculaTotalPontos(sprint));
 	}
 	
+	@Test
+	private void testaSprintDeveTer3ItensHistorico(){
+		Sprint sprint = new Sprint();
+		sprint.setItensHistorico(new ArrayList<ItemHistorico>());
+		sprint.getItensHistorico.add(new ItemHistorico());
+		sprint.getItensHistorico.add(new ItemHistorico());
+		sprint.getItensHistorico.add(new ItemHistorico());
+
+		assertEquals(3, sprint.getItensHistorico().size());
+	}
+	
 }
