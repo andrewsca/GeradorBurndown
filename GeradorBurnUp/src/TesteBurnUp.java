@@ -46,7 +46,7 @@ public class TesteBurnUp extends TestCase{
 		SprintBO bo = new SprintBO();
 		Sprint sprint = new Sprint();
 		
-		assertEquals(16, bo.calculaTotalHoras(sprint));
+		assertEquals(16.0, bo.calculaTotalHoras(sprint));
 	}
 	
 	
