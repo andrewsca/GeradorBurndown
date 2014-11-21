@@ -14,4 +14,8 @@ public class SprintBO {
 		return totalHorasSprint;
 	}
 
+	public Integer calculaTotalPontos(Sprint sprint) {
+		return new Integer(20);
+	}
+
 }

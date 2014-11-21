@@ -63,7 +63,7 @@ public class TesteBurnUp extends TestCase{
 		SprintBO bo = new SprintBO();
 		Sprint sprint = new Sprint();
 		
-		assertEquals(20, bo.calculaTotalPontos(sprint));
+		assertEquals(new Integer(20), bo.calculaTotalPontos(sprint));
 	}
 	
 }
