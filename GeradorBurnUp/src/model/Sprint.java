@@ -14,7 +14,7 @@ public class Sprint {
 	}
 
 	public Double getTotalHoras() {
-		return 60.0;
+		return totalHoras;
 	}
 
 	public void setTotalHoras(Double totalHoras) {
