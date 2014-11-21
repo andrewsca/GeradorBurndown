@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+import model.Estoria;
 import model.Sprint;
 
 import org.junit.Test;
@@ -30,6 +33,10 @@ public class TesteBurnUp extends TestCase{
 	@Test
 	public void testaSprintDeveTer2Estorias(){
 		Sprint sprint = new Sprint();
+		sprint.setEstorias(new ArrayList<Estoria>());
+		sprint.getEstorias().add(new Estoria(1));
+		sprint.getEstorias().add(new Estoria(2));
+		
 		assertEquals(2, sprint.getEstorias().size());
 	}
 	
