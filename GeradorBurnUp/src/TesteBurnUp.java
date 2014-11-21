@@ -1,3 +1,5 @@
+import model.Sprint;
+
 import org.junit.Test;
 
 import junit.framework.TestCase;
