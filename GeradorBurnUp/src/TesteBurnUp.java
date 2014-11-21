@@ -62,6 +62,15 @@ public class TesteBurnUp extends TestCase{
 	public void testaCalculoPontosSprintBODeveSer20(){
 		SprintBO bo = new SprintBO();
 		Sprint sprint = new Sprint();
+		sprint.setEstorias(new ArrayList<Estoria>());
+		Estoria estoria1 = new Estoria();
+		Estoria estoria2 = new Estoria();
+		
+		estoria1.setQtdePontos(new Integer(12));
+		estoria2.setQtdePontos(new Integer(8));
+		
+		sprint.getEstorias().add(estoria1);
+		sprint.getEstorias().add(estoria2);
 		
 		assertEquals(new Integer(20), bo.calculaTotalPontos(sprint));
 	}

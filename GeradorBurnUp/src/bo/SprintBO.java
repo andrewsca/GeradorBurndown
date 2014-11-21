@@ -15,7 +15,12 @@ public class SprintBO {
 	}
 
 	public Integer calculaTotalPontos(Sprint sprint) {
-		return new Integer(20);
+		Integer totalPontosSprint = 0;
+		for (Estoria est : sprint.getEstorias()) {
+			totalPontosSprint += est.getQtdePontos();
+		}
+		
+		return totalPontosSprint;
 	}
 
 }

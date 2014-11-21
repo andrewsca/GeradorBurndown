@@ -3,7 +3,7 @@ package model;
 public class Estoria {
 	private Integer codEstoria;
 	private double tempoRestante;
-
+	private Integer qtdePontos;
 	
 
 	public Estoria(Integer codEstoria, double tempoRestante) {
@@ -31,5 +31,13 @@ public class Estoria {
 
 	public void setTempoRestante(double tempoRestante) {
 		this.tempoRestante = tempoRestante;
+	}
+
+	public Integer getQtdePontos() {
+		return qtdePontos;
+	}
+
+	public void setQtdePontos(Integer qtdePontos) {
+		this.qtdePontos = qtdePontos;
 	}
 }
