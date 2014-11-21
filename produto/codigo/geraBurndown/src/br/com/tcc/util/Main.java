@@ -35,7 +35,7 @@ public class Main {
 	 * @return
 	 * @throws ParseException
 	 */
-	private static Sprint criaSprint() throws ParseException {
+	public static Sprint criaSprint() throws ParseException {
 		Sprint sprint = new Sprint();
 		sprint.setDtInicio(DataUtil.converteStringParaDate(DT_INICIO_SPRINT));
 		sprint.setQtdeDias(QTDE_DIAS_SPRINT);
