@@ -35,8 +35,8 @@ public class TesteBurnUp extends TestCase{
 	public void testaSprintDeveTer2Estorias(){
 		Sprint sprint = new Sprint();
 		sprint.setEstorias(new ArrayList<Estoria>());
-		sprint.getEstorias().add(new Estoria(1));
-		sprint.getEstorias().add(new Estoria(2));
+		sprint.getEstorias().add(new Estoria(1,2));
+		sprint.getEstorias().add(new Estoria(2,3));
 		
 		assertEquals(2, sprint.getEstorias().size());
 	}
@@ -45,6 +45,15 @@ public class TesteBurnUp extends TestCase{
 	public void testaCalculoTotalHorasDeveSer16(){
 		SprintBO bo = new SprintBO();
 		Sprint sprint = new Sprint();
+		sprint.setEstorias(new ArrayList<Estoria>());
+
+		Estoria estoria1 = new Estoria();
+		Estoria estoria2 = new Estoria();
+		estoria1.setTempoRestante(10);
+		sprint.getEstorias().add(estoria1);
+		
+		estoria2.setTempoRestante(6);
+		sprint.getEstorias().add(estoria2);
 		
 		assertEquals(16.0, bo.calculaTotalHoras(sprint));
 	}
