@@ -9,6 +9,7 @@ import model.Sprint;
 
 import org.junit.Test;
 
+import bo.BurnUpBO;
 import bo.SprintBO;
 
 /**
@@ -90,13 +91,13 @@ public class TesteBurnUp extends TestCase{
 	}
 	
 	@Test
-	public void testaBurnUpBOCaculaEixosXYHoras(Sprint sprint){
+	public void testaBurnUpBOCaculaEixosXYHoras(){
 		ItemHistorico item = new ItemHistorico();
 		Date data = new Date(2014,11,20);
 		item.setData(data);
 		item.setTempoGasto(1);
 		
-		sprint = new Sprint();
+		Sprint sprint = new Sprint();
 		sprint.setItensHistorico(new ArrayList<ItemHistorico>());
 		sprint.getItensHistorico().add(item);
 		
